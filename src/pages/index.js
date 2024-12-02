@@ -2,6 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+import BaseLayout from "@/components/layouts/BaseLayout";
+import { Button, Card, Col, Row } from "reactstrap";
+import Link from "next/link";
+import g1 from "../../public/images/g1.png";
+import g2 from "../../public/images/g2.png";
+import g3 from "../../public/images/g3.png";
+import c1 from "../../public/images/checklist.png";
+import c2 from "../../public/images/checklist2.png";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,96 +31,99 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
-        <main className={styles.main}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol>
-            <li>
-              Get started by editing <code>src/pages/index.js</code>.
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
-
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-              />
-              Deploy now
-            </a>
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.secondary}
-            >
-              Read our docs
-            </a>
-          </div>
-        </main>
-        <footer className={styles.footer}>
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
-          <a
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Go to nextjs.org →
-          </a>
-        </footer>
-      </div>
+      <BaseLayout>
+        <Row>
+          <Col lg={6} md={12} className="order-md-2 order-lg-1" style={{ paddingTop: "20vh" }}>
+            <h2>Talenta terbaik negri untuk perubahan revolusi 4.0</h2>
+            <p className="mt-2">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam harum facere cumque, consequatur, inventore earum, consequuntur quis soluta nesciunt dolore similique minima vitae impedit excepturi. Esse minus aperiam cumque
+              facere.
+            </p>
+            <Link href={"/search"}>
+              <Button color="primary" size="lg" className="mt-3">
+                Mulai Dari Sekarang
+              </Button>
+            </Link>
+          </Col>
+          <Col lg={6} md={12} className="order-md-1 order-lg-2">
+            <Image src={g1} />
+          </Col>
+        </Row>
+        <Row className="mt-5">
+          <Col lg={6} md={12}>
+            <Image src={g2} />
+          </Col>
+          <Col lg={6} md={12} style={{ marginTop: "15vh" }}>
+            <h2>Kenapa harus mencari talent di peworld</h2>
+            <p style={{ marginTop: "2vh" }}>
+              <Image src={c1} /> Lorem ipsum dolor sit amet.
+            </p>
+            <p style={{ marginTop: "2vh" }}>
+              <Image src={c1} /> Lorem ipsum dolor sit amet.
+            </p>
+            <p style={{ marginTop: "2vh" }}>
+              <Image src={c1} /> Lorem ipsum dolor sit amet.
+            </p>
+            <p style={{ marginTop: "2vh" }}>
+              <Image src={c1} /> Lorem ipsum dolor sit amet.
+            </p>
+          </Col>
+        </Row>
+        <Row className="mt-5">
+          <Col lg={6} md={12} style={{ paddingTop: "10vh" }}>
+            <h2>Skill Talent</h2>
+            <p className="mt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi quod velit, provident consequuntur similique perferendis cumque, voluptatum, temporibus voluptate alias voluptatem quia minus quo maiores eos vel
+              consectetur eveniet?
+            </p>
+            <Row>
+              <Col lg={6} md={12}>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> Java
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> Kotlin
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> PHP
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> JavaScript
+                </p>
+              </Col>
+              <Col lg={6} md={12}>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> Golang
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> C++
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> Ruby
+                </p>
+                <p style={{ marginTop: "2vh" }}>
+                  <Image src={c2} /> 10+ Bahasa lainnya
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col lg={6} md={12}>
+            <Image src={g3} />
+          </Col>
+        </Row>
+        <div className="justify-content-center mt-5">
+          <Card style={{ borderRadius: "40px 8px 40px 8px", backgroundColor: "#5E50A1" }}>
+            <div className="d-flex justify-content-around align-items-center mt-3 mb-3">
+              <h2 style={{ color: "white" }}>Lorem ipsum dolor sit amet</h2>
+              <Link href={"/search"}>
+                <Button color="primary" size="lg" className="mt-3">
+                  Mulai Dari Sekarang
+                </Button>
+              </Link>
+            </div>
+          </Card>
+        </div>
+      </BaseLayout>
     </>
   );
 }
